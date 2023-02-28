@@ -6,6 +6,7 @@ namespace AppBuscaCEP.Model
 {
     public class Bairro
     {
+        public int id { get; set; }
         public string descricao_bairro { get; set; }
     }
 }

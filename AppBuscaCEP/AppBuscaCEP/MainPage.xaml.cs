@@ -14,5 +14,18 @@ namespace AppBuscaCEP
         {
             InitializeComponent();
         }
+
+        private void BairroByCidade_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new View.BairrosPorCidade());
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "OK");
+            }
+        }
     }
 }

@@ -53,5 +53,67 @@ namespace AppBuscaCEP.Service
             return arr_bairros;
         }
 
+        public static async Task<List<Logradouro>> LogradouroByBairroAndCidade(int id_cidade, string desc_bairro)
+        {
+            List<Logradouro> arr_ruas = new List<Logradouro>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=" + id_cidade +"&bairro=" + desc_bairro);
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+
+                    arr_ruas = JsonConvert.DeserializeObject<List<Logradouro>>(json);
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+            }
+
+            return arr_ruas;
+        }
+
+        public static async Task<Cep> GetCepBylogradouro(string desc_logradouro)
+        {
+            Cep cep;
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + desc_logradouro);
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+
+                    cep = JsonConvert.DeserializeObject<Cep>(json);
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+
+            }
+
+            return cep;
+        }
+
+        public static async Task<List<Cidade>> CidadeByUF(string uf)          
+        {
+            List<Cidade> arr_cidades = new List<Cidade>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=" + uf);
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+
+                    arr_cidades = JsonConvert.DeserializeObject<List<Cidade>>(json);
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+            }
+
+            return arr_cidades;
+        }
+
+
     }
 }

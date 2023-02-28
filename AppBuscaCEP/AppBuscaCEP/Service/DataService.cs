@@ -53,7 +53,7 @@ namespace AppBuscaCEP.Service
             return arr_bairros;
         }
 
-        public static async Task<List<Logradouro>> LogradouroByBairroAndCidade(int id_cidade, string desc_bairro)
+        public static async Task<List<Logradouro>> LogradouroByBairroAndIdCidade(int id_cidade, string desc_bairro)
         {
             List<Logradouro> arr_ruas = new List<Logradouro>();
 

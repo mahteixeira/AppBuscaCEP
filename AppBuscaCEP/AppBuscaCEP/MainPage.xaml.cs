@@ -13,6 +13,7 @@ namespace AppBuscaCEP
         public MainPage()
         {
             InitializeComponent();
+            logo.Source = ImageSource.FromResource("Imagens.buscacep.png");
         }
 
         private void BairroByCidade_Clicked(object sender, EventArgs e)
@@ -20,6 +21,19 @@ namespace AppBuscaCEP
             try
             {
                 Navigation.PushAsync(new View.BairrosPorCidade());
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "OK");
+            }
+        }
+
+        private void CepByLog_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new View.CepPorLogradouro());
 
             }
             catch (Exception ex)

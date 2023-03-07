@@ -4,11 +4,12 @@
              x:Class="AppBuscaCEP.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Button x:Name="BairroByCidade" Clicked="BairroByCidade_Clicked" Grid.Row="0" Grid.Column="0"/>
+        
+            <Image x:Name="logo"/>
        
+        <Button Text="Bairros por cidade"  x:Name="BairroByCidade" Clicked="BairroByCidade_Clicked"/>
+        <Button Text="Cep por Logradouro"  x:Name="CepByLog" Clicked="CepByLog_Clicked"/>
+
     </StackLayout>
 
 </ContentPage>

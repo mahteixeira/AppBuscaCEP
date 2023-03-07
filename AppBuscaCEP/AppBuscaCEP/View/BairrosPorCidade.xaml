@@ -4,9 +4,16 @@
              x:Class="AppBuscaCEP.View.BairrosPorCidade">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Estado:"/>
+            <Picker x:Name="pck_uf"
+                            
+                            Title="Selecione o estado desejado:"/>
+            
+            <Label Text="Cidade:"/>
+            <Picker x:Name="pck_cidade"
+                            
+                            Title="Selecione a cidade desejada:"/>
+            <Button Text="Procurar" x:Name="pesquisar_cidade" Clicked="pesquisar_cidade_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

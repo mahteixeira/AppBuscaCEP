@@ -18,6 +18,5 @@ namespace AppBuscaCEP.Model
         public string descricao_bairro { get; set; }
         public object rows { get; set; }
         public int CEP { get; set; }
-        public string UF { get; set; }
     }
 }

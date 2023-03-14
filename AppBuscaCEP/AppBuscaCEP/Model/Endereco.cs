@@ -17,6 +17,11 @@ namespace AppBuscaCEP.Model
         public string codigo_cidade_ibge { get; set; }
         public string descricao_bairro { get; set; }
         public object rows { get; set; }
-        public int CEP { get; set; }
+        public string cep { get; set; }
+
+        public static implicit operator string(Endereco v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBuscaCEP.View.CepPorLogradouro">
+             x:Class="AppBuscaCEP.View.EnderecoByCep">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <SearchBar x:Name="txt_logradouro" Placeholder="Qual a sua rua?"/>
+                <SearchBar x:Name="txt_cep" Placeholder="Qual a sua rua?"/>
                 <Button x:Name="busca" Text="Buscar" Clicked="busca_Clicked" />
             </StackLayout>
 
             <ActivityIndicator x:Name="carregando" IsRunning="False" IsVisible="False" Color="#20994a"/>
-            
+
             <ListView x:Name="lst_ceps">
                 <ListView.Header>
                     <Grid ColumnDefinitions="60, *, *, *" RowDefinitions="Auto">

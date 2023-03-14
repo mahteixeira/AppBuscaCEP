@@ -3,6 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBuscaCEP.App">
     <Application.Resources>
+        <Style x:Key="botao" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#20994a"/>
+            <Setter Property="BorderWidth" Value="20"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
 
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#20994a" />
+            <Setter Property="BarTextColor" Value="White" />
+        </Style>
     </Application.Resources>
 </Application>

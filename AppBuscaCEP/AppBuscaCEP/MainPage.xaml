@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBuscaCEP.MainPage">
 
-    <StackLayout>
+    <StackLayout Margin="20">
         
             <Image x:Name="logo"/>
        
-        <Button Text="Bairros por cidade"  x:Name="BairroByCidade" Clicked="BairroByCidade_Clicked"/>
-        <Button Text="Cep por Logradouro"  x:Name="CepByLog" Clicked="CepByLog_Clicked"/>
+        <Button Text="Bairros por cidade"  x:Name="BairroByCidade" Clicked="BairroByCidade_Clicked"
+                Style="{StaticResource botao}"/>
+        <Button Text="Cep por Logradouro"  x:Name="CepByLog" Clicked="CepByLog_Clicked"
+                Style="{StaticResource botao}"/>
 
     </StackLayout>
 

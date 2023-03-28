@@ -13,7 +13,6 @@ namespace AppBuscaCEP
         public MainPage()
         {
             InitializeComponent();
-            logo.Source = ImageSource.FromResource("Imagens.buscacep.png");
         }
 
         private void BairroByCidade_Clicked(object sender, EventArgs e)

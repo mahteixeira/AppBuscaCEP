@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBuscaCEP.View.EnderecoByCep">
+             x:Class="AppBuscaCEP.View.EnderecoByCep" Title="Endereço por CEP">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <SearchBar x:Name="txt_cep" Placeholder="Qual a sua rua?"/>
-                <Button x:Name="busca" Text="Buscar" Clicked="busca_Clicked" />
+                <Button x:Name="busca" Text="Buscar" Clicked="busca_Clicked" Style="{StaticResource botao}"/>
             </StackLayout>
 
             <ActivityIndicator x:Name="carregando" IsRunning="False" IsVisible="False" Color="#20994a"/>

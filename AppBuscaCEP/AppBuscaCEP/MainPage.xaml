@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBuscaCEP.MainPage">
+             x:Class="AppBuscaCEP.MainPage" Title="Bem vindo!!" >
 
     <StackLayout Margin="20">
+
+        <Label Text="O que vamos conferir hoje?" Style="{StaticResource fonteNegrito}" FontSize="20"
+               Margin="0,0,0,20" TextColor="#20994a"/>
         
-            <Image x:Name="logo"/>
-       
-        <Button Text="Bairros por cidade"  x:Name="BairroByCidade" Clicked="BairroByCidade_Clicked"
-                Style="{StaticResource botao}"/>
-        <Button Text="Cep por Logradouro"  x:Name="CepByLog" Clicked="CepByLog_Clicked"
-                Style="{StaticResource botao}"/>
+
+        <Button Text="Bairros por cidade"  x:Name="BairroByCidade" Clicked="BairroByCidade_Clicked"/>
+        <Button Text="Cep por Logradouro"  x:Name="CepByLog" Clicked="CepByLog_Clicked"/>
 
     </StackLayout>
 
